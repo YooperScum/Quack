@@ -1,5 +1,14 @@
 # Quack?
 
+New Features:
+-A new crocodile enemy, which will follow and kill the duckling if it is hit, causing a game over state.
+-A new main menu which can lead to a settings menu and exit the game.
+-A pause menu that can be accessed at any time, while pausing game time.
+-A settings menu for adjusting volume.
+-An overhauled camera that doesn't use a static position. Instead, it follows the duckling.
+-A separate animation to differentiate out of water from in water.
+-Various bug fixes and removal of development features from final builds.
+
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 From the original Global Game Jam Online description: Quack is a 3D third-person game in which you are a smol ducko who fell into the sewers and have to rescue your brothers and get out.

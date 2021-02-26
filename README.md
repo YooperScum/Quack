@@ -10,7 +10,8 @@ New Features:<br>
 -Various bug fixes and removal of development features from final builds.<br>
 <br>Future Features:<br>
 -If you want to make new unique levels, you'll need to make your own meshes and navigation nodes for the gator<br>
--If you want to make the game Mulitplayer, you will have to change the color of the ducklings and to impliment the Photon Library
+-If you want to make the game Mulitplayer, you will have to change the color of the ducklings and to implement the Photon Library.<br>
+-The movement system is rather primitive, using direct translations and physics. For more intuitive movement, scrapping the current system altogether might be preferrable, and working from the default Unity CharacterController class.
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

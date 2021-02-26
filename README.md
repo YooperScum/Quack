@@ -1,13 +1,13 @@
 # Quack?
 
 New Features:
--A new crocodile enemy, which will follow and kill the duckling if it is hit, causing a game over state.
--A new main menu which can lead to a settings menu and exit the game.
--A pause menu that can be accessed at any time, while pausing game time.
--A settings menu for adjusting volume.
--An overhauled camera that doesn't use a static position. Instead, it follows the duckling.
--A separate animation to differentiate out of water from in water.
--Various bug fixes and removal of development features from final builds.
+-A new crocodile enemy, which will follow and kill the duckling if it is hit, causing a game over state.<br>
+-A new main menu which can lead to a settings menu and exit the game.<br>
+-A pause menu that can be accessed at any time, while pausing game time.<br>
+-A settings menu for adjusting volume.<br>
+-An overhauled camera that doesn't use a static position. Instead, it follows the duckling.<br>
+-A separate animation to differentiate out of water from in water.<br>
+-Various bug fixes and removal of development features from final builds.<br>
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

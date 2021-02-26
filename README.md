@@ -5,7 +5,7 @@ From the original Global Game Jam Online description: Quack is a 3D third-person
 https://globalgamejam.org/2021/games/quack-1
 
 
-(https://ggj.s3.amazonaws.com/styles/game_content__wide/games/screenshots/2021/01/176902/screenshot_2021-01-30_220849.png?itok=8by2C0Tm&timestamp=1612074008)
-(https://ggj.s3.amazonaws.com/styles/game_content__wide/games/screenshots/2021/01/176902/screenshot_2021-01-30_220604.png?itok=GcU-f8H1&timestamp=1612074008)
+![Duck1](https://ggj.s3.amazonaws.com/styles/game_content__wide/games/screenshots/2021/01/176902/screenshot_2021-01-30_220849.png?itok=8by2C0Tm&timestamp=1612074008)
+![Duck2](https://ggj.s3.amazonaws.com/styles/game_content__wide/games/screenshots/2021/01/176902/screenshot_2021-01-30_220604.png?itok=GcU-f8H1&timestamp=1612074008)
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------

@@ -8,6 +8,8 @@ New Features:<br>
 -An overhauled camera that doesn't use a static position. Instead, it follows the duckling.<br>
 -A separate animation to differentiate out of water from in water.<br>
 -Various bug fixes and removal of development features from final builds.<br>
+Future Features:<br>
+-If you want to make new unique levels, you'll need to make your own meshes and navigation nodes for the gator
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

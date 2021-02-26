@@ -1,6 +1,9 @@
 # Quack?
 
-New Features:<br>
+How to Build:<br>
+To build <i>Quack?</i>, developers must navigate (in the Unity editor window) to File->Build Settings. Then, you must make sure all relevant Scenes are added to the build settings. Change any options that you might want (the Unity interface is intuitive enough to show this), and then click "Build". Give a file directory you wish to build to, and wait as the game builds.<br>
+
+<br>New Features:<br>
 -A new crocodile enemy, which will follow and kill the duckling if it is hit, causing a game over state.<br>
 -A new main menu which can lead to a settings menu and exit the game.<br>
 -A pause menu that can be accessed at any time, while pausing game time.<br>

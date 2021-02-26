@@ -1,6 +1,6 @@
 # Quack?
 
-New Features:
+New Features:<br>
 -A new crocodile enemy, which will follow and kill the duckling if it is hit, causing a game over state.<br>
 -A new main menu which can lead to a settings menu and exit the game.<br>
 -A pause menu that can be accessed at any time, while pausing game time.<br>

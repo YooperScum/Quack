@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GameDirector : MonoBehaviour
 {
+    [SerializeField] BoolVar isPaused;
+
     private int brothersToWin = 4;
     private int currentBrothers = 0;
     private GameObject player;
@@ -22,7 +24,22 @@ public class GameDirector : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            Application.Quit();
+            if (isPaused.Value == true)
+            {
+                isPaused.Value = false;
+                //Close menu
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+                Time.timeScale = 1;
+            }
+            else
+            {
+                isPaused.Value = true;
+                //Open menu
+                Cursor.lockState = CursorLockMode.Confined;
+                Cursor.visible = true;
+                Time.timeScale = 0;
+            }
         }
     }
 

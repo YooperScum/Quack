@@ -23,7 +23,6 @@ public class CameraSwitcher : MonoBehaviour
         _Cameras[0].gameObject.SetActive(true);
     }
 
-
     // Update is called once per frame
     void Update()
     {

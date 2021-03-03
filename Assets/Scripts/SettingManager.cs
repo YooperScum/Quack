@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class SettingManager : MonoBehaviour
 {
     [SerializeField] private Image[] _notches = null;
-    private int _volume;
+    [SerializeField] private FloatVar _floatVolume = null;
+    private int _volume = 0;
 
     public int Volume
     {
@@ -15,7 +16,9 @@ public class SettingManager : MonoBehaviour
         { 
             _volume = value;
             int num = _volume;
-            foreach(Image img in _notches)
+            _floatVolume.Value = _volume/20f;
+            PlayerPrefs.SetFloat("volume", _floatVolume.Value);
+            foreach (Image img in _notches)
             {
                 if(num != 0)
                 {
@@ -34,7 +37,9 @@ public class SettingManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (!PlayerPrefs.HasKey("volume")) PlayerPrefs.SetFloat("volume", 0.5f);
+        _floatVolume.Value = PlayerPrefs.GetFloat("volume");
+        Volume = Mathf.RoundToInt(_floatVolume.Value * 20f);
     }
 
     // Update is called once per frame

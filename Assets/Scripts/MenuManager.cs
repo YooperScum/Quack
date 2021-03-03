@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private GameObject _titleScreen = null;
     [SerializeField] private GameObject _menuScreen = null;
     [SerializeField] private GameObject _settingsScreen = null;
+
+    [SerializeField] private Animator _transitionAnim = null;
 
     private bool _titleScreenTriggered = false;
     private bool _camIsPositioned = true;
@@ -54,6 +57,8 @@ public class MenuManager : MonoBehaviour
     public void Play()
     {
         //Play Transition and change to the main game scene.
+        _transitionAnim.gameObject.transform.parent.gameObject.SetActive(true);
+        _transitionAnim.SetTrigger("Swipe");
     }
     public void SettingsToggle()
     {

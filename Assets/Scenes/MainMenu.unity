@@ -916,6 +916,7 @@ CanvasRenderer:
   m_CullTransparentMesh: 1
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &516632818
 GameObject:
   m_ObjectHideFlags: 0
@@ -1041,6 +1042,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sceneIndex: 1
+=======
+>>>>>>> parent of 9f9ae4f (Animations and audio stuff)
 =======
 >>>>>>> parent of 9f9ae4f (Animations and audio stuff)
 =======
@@ -5313,9 +5316,12 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   _floatVolume: {fileID: 11400000, guid: 7d1e04c241b5640489ce9c7bdff521b4, type: 2}
 =======
 >>>>>>> b5cc9463b923a29186bee90a8e3dba14e6f6b71d
+=======
+>>>>>>> parent of 9f9ae4f (Animations and audio stuff)
 =======
 >>>>>>> parent of 9f9ae4f (Animations and audio stuff)
 =======

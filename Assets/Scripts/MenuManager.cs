@@ -55,7 +55,7 @@ public class MenuManager : MonoBehaviour
     public void Play()
     {
         //Play Transition and change to the main game scene.
-        _transitionAnim.transform.parent.gameObject.SetActive(true);
+        _transitionAnim.gameObject.transform.parent.gameObject.SetActive(true);
         _transitionAnim.SetTrigger("Swipe");
     }
     public void SettingsToggle()

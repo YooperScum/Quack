@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameDirector : MonoBehaviour
 {
     [SerializeField] BoolVar isPaused;
+    [SerializeField] GameObject pauseMenu;
 
     private int brothersToWin = 4;
     private int currentBrothers = 0;
@@ -27,7 +29,7 @@ public class GameDirector : MonoBehaviour
             if (isPaused.Value == true)
             {
                 isPaused.Value = false;
-                //Close menu
+                pauseMenu.SetActive(false);
                 Cursor.lockState = CursorLockMode.Locked;
                 Cursor.visible = false;
                 Time.timeScale = 1;
@@ -35,7 +37,7 @@ public class GameDirector : MonoBehaviour
             else
             {
                 isPaused.Value = true;
-                //Open menu
+                pauseMenu.SetActive(true);
                 Cursor.lockState = CursorLockMode.Confined;
                 Cursor.visible = true;
                 Time.timeScale = 0;
@@ -50,5 +52,28 @@ public class GameDirector : MonoBehaviour
         {
             Destroy(sewerExit);
         }
+    }
+
+    public void Unpause()
+    {
+        if (isPaused.Value == true)
+        {
+            isPaused.Value = false;
+            pauseMenu.SetActive(false);
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+            Time.timeScale = 1;
+        }
+    }
+
+    public void QuitToMenu()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
+    }
+
+    public void QuitToDesktop()
+    {
+        Application.Quit();
     }
 }

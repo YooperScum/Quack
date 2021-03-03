@@ -914,6 +914,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 497379542}
   m_CullTransparentMesh: 1
+<<<<<<< HEAD
 --- !u!1 &516632818
 GameObject:
   m_ObjectHideFlags: 0
@@ -1039,6 +1040,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sceneIndex: 1
+=======
+>>>>>>> parent of 9f9ae4f (Animations and audio stuff)
 --- !u!1 &569956090
 GameObject:
   m_ObjectHideFlags: 0
@@ -2932,7 +2935,6 @@ RectTransform:
   - {fileID: 1606791493}
   - {fileID: 1127132899}
   - {fileID: 673488687}
-  - {fileID: 1816370989}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3638,7 +3640,6 @@ MonoBehaviour:
   _titleScreen: {fileID: 1127132898}
   _menuScreen: {fileID: 1606791492}
   _settingsScreen: {fileID: 673488686}
-  _transitionAnim: {fileID: 516632820}
 --- !u!1 &1127132898
 GameObject:
   m_ObjectHideFlags: 0
@@ -4902,42 +4903,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1740149081}
   m_CullTransparentMesh: 1
---- !u!1 &1816370988
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1816370989}
-  m_Layer: 5
-  m_Name: Transition
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &1816370989
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1816370988}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 516632819}
-  m_Father: {fileID: 957967938}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1914474672
 GameObject:
   m_ObjectHideFlags: 0
@@ -5343,9 +5308,12 @@ MonoBehaviour:
   - {fileID: 884908971}
   - {fileID: 105118823}
 <<<<<<< HEAD
+<<<<<<< HEAD
   _floatVolume: {fileID: 11400000, guid: 7d1e04c241b5640489ce9c7bdff521b4, type: 2}
 =======
 >>>>>>> b5cc9463b923a29186bee90a8e3dba14e6f6b71d
+=======
+>>>>>>> parent of 9f9ae4f (Animations and audio stuff)
 --- !u!1001 &6164484293351280305
 PrefabInstance:
   m_ObjectHideFlags: 0

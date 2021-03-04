@@ -31,17 +31,9 @@ public class GameDirector : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            music.mute = true;
-            if (isPaused.Value == true)
+            if (isPaused.Value == false)
             {
-                isPaused.Value = false;
-                pauseMenu.SetActive(false);
-                Cursor.lockState = CursorLockMode.Locked;
-                Cursor.visible = false;
-                Time.timeScale = 1;
-            }
-            else
-            {
+                music.mute = true;
                 isPaused.Value = true;
                 pauseMenu.SetActive(true);
                 Cursor.lockState = CursorLockMode.Confined;

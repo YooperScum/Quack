@@ -150,7 +150,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &8712468325422839481
 RectTransform:
   m_ObjectHideFlags: 0
@@ -231,9 +231,9 @@ RectTransform:
   m_Father: {fileID: 8712468327156758962}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 200.06897, y: -27.444748}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 165.86792, y: 54.889496}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8712468325500697590
@@ -353,9 +353,9 @@ RectTransform:
   m_Father: {fileID: 8712468327156758962}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 200.06897, y: -92.341125}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 165.8679, y: 54.8895}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8712468325520652922
@@ -743,9 +743,9 @@ RectTransform:
   m_Father: {fileID: 8712468327156758962}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 200.06897, y: -157.2375}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 400, y: 54.8895}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8712468326250433006
@@ -999,9 +999,9 @@ RectTransform:
   m_Father: {fileID: 8712468327156758962}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 200.06897, y: -222.13388}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 400, y: 54.8895}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8712468326317423405
@@ -1122,9 +1122,9 @@ RectTransform:
   m_Father: {fileID: 8712468325422839481}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 300, y: -400}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 400.13794, y: 259.5855}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8712468327156758963

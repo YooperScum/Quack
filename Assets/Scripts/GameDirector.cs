@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameDirector : MonoBehaviour
 {
     [SerializeField] BoolVar isPaused;
+    [SerializeField] GameObject pauseFade;
     [SerializeField] GameObject pauseMenu;
     [SerializeField] GameObject settingsMenu;
     [SerializeField] FloatVar musicVolume;
@@ -33,6 +34,7 @@ public class GameDirector : MonoBehaviour
         {
             if (isPaused.Value == false)
             {
+                pauseFade.SetActive(true);
                 music.mute = true;
                 isPaused.Value = true;
                 pauseMenu.SetActive(true);
@@ -57,6 +59,7 @@ public class GameDirector : MonoBehaviour
         music.mute = false;
         if (isPaused.Value == true)
         {
+            pauseFade.SetActive(false);
             isPaused.Value = false;
             pauseMenu.SetActive(false);
             Cursor.lockState = CursorLockMode.Locked;

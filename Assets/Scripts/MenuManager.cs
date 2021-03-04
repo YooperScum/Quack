@@ -10,6 +10,7 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private GameObject _menuScreen = null;
     [SerializeField] private GameObject _settingsScreen = null;
     [SerializeField] private Animator _transitionAnim = null;
+    [SerializeField] private FloatVar _volume = null;
 
     private bool _titleScreenTriggered = false;
     private bool _camIsPositioned = true;
@@ -25,6 +26,9 @@ public class MenuManager : MonoBehaviour
         _settingsScreen.SetActive(false);
 
         _cam.transform.position = _cameraLocations[0].position;
+
+        if (!PlayerPrefs.HasKey("volume")) PlayerPrefs.SetFloat("volume", 0.5f);
+        _volume.Value = PlayerPrefs.GetFloat("volume");
     }
 
     // Update is called once per frame

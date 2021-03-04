@@ -3439,6 +3439,7 @@ MonoBehaviour:
   _menuScreen: {fileID: 1606791492}
   _settingsScreen: {fileID: 673488686}
   _transitionAnim: {fileID: 516632820}
+  _volume: {fileID: 11400000, guid: 7d1e04c241b5640489ce9c7bdff521b4, type: 2}
 --- !u!1 &1127132898
 GameObject:
   m_ObjectHideFlags: 0

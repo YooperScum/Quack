@@ -6,7 +6,11 @@ using UnityEngine.SceneManagement;
 public class GameDirector : MonoBehaviour
 {
     [SerializeField] BoolVar isPaused;
+    [SerializeField] GameObject pauseFade;
     [SerializeField] GameObject pauseMenu;
+    [SerializeField] GameObject settingsMenu;
+    [SerializeField] FloatVar musicVolume;
+    [SerializeField] AudioSource music;
 
     private int brothersToWin = 4;
     private int currentBrothers = 0;
@@ -24,18 +28,14 @@ public class GameDirector : MonoBehaviour
 
     private void Update()
     {
+        music.volume = musicVolume.Value;
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (isPaused.Value == true)
+            if (isPaused.Value == false)
             {
-                isPaused.Value = false;
-                pauseMenu.SetActive(false);
-                Cursor.lockState = CursorLockMode.Locked;
-                Cursor.visible = false;
-                Time.timeScale = 1;
-            }
-            else
-            {
+                pauseFade.SetActive(true);
+                music.mute = true;
                 isPaused.Value = true;
                 pauseMenu.SetActive(true);
                 Cursor.lockState = CursorLockMode.Confined;
@@ -56,14 +56,28 @@ public class GameDirector : MonoBehaviour
 
     public void Unpause()
     {
+        music.mute = false;
         if (isPaused.Value == true)
         {
+            pauseFade.SetActive(false);
             isPaused.Value = false;
             pauseMenu.SetActive(false);
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
             Time.timeScale = 1;
         }
+    }
+
+    public void OpenSettings()
+    {
+        pauseMenu.SetActive(false);
+        settingsMenu.SetActive(true);
+    }
+
+    public void ExitSettings()
+    {
+        settingsMenu.SetActive(false);
+        pauseMenu.SetActive(true);
     }
 
     public void QuitToMenu()

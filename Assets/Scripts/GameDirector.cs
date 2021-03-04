@@ -8,6 +8,8 @@ public class GameDirector : MonoBehaviour
     [SerializeField] BoolVar isPaused;
     [SerializeField] GameObject pauseMenu;
     [SerializeField] GameObject settingsMenu;
+    [SerializeField] FloatVar musicVolume;
+    [SerializeField] AudioSource music;
 
     private int brothersToWin = 4;
     private int currentBrothers = 0;
@@ -25,8 +27,11 @@ public class GameDirector : MonoBehaviour
 
     private void Update()
     {
+        music.volume = musicVolume.Value;
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            music.mute = true;
             if (isPaused.Value == true)
             {
                 isPaused.Value = false;
@@ -57,6 +62,7 @@ public class GameDirector : MonoBehaviour
 
     public void Unpause()
     {
+        music.mute = false;
         if (isPaused.Value == true)
         {
             isPaused.Value = false;

@@ -7,6 +7,7 @@ public class GameDirector : MonoBehaviour
 {
     [SerializeField] BoolVar isPaused;
     [SerializeField] GameObject pauseMenu;
+    [SerializeField] GameObject settingsMenu;
 
     private int brothersToWin = 4;
     private int currentBrothers = 0;
@@ -64,6 +65,18 @@ public class GameDirector : MonoBehaviour
             Cursor.visible = false;
             Time.timeScale = 1;
         }
+    }
+
+    public void OpenSettings()
+    {
+        pauseMenu.SetActive(false);
+        settingsMenu.SetActive(true);
+    }
+
+    public void ExitSettings()
+    {
+        settingsMenu.SetActive(false);
+        pauseMenu.SetActive(true);
     }
 
     public void QuitToMenu()

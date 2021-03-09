@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class GatorBehavior : MonoBehaviour
 {
-    [SerializeField] List<Transform> patrolPoints = null;
     public GameObject patrolTarget = null;
     public GameObject duckTarget = null;
     public float speed = 5f;

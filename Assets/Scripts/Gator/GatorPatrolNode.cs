@@ -10,7 +10,11 @@ public class GatorPatrolNode : MonoBehaviour
     {
         if (other.GetComponent<GatorBehavior>())
         {
-            other.GetComponent<GatorBehavior>().patrolTarget = nextNode;
+            if (gameObject == other.GetComponent<GatorBehavior>().patrolTarget)
+            {
+                Debug.Log("Yes");
+                other.gameObject.GetComponent<GatorBehavior>().patrolTarget = nextNode;
+            }
         }
     }
 }

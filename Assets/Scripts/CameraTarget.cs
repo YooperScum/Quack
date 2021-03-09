@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CameraTarget : MonoBehaviour
 {
+    [SerializeField] BoolVar isPaused;
     [SerializeField] GameObject follow;
 
     private float xRot;
@@ -18,13 +19,16 @@ public class CameraTarget : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(follow.transform.position.x, this.transform.position.y, follow.transform.position.z);
+        if (isPaused.Value == false)
+        {
+            transform.position = new Vector3(follow.transform.position.x, this.transform.position.y, follow.transform.position.z);
 
-        xRot += Input.GetAxis("CameraY");
-        yRot += Input.GetAxis("CameraX");
+            xRot += Input.GetAxis("CameraY");
+            yRot += Input.GetAxis("CameraX");
 
-        xRot = Mathf.Clamp(xRot, -45f, 45f);
+            xRot = Mathf.Clamp(xRot, -45f, 45f);
 
-        transform.rotation = Quaternion.Euler(xRot, yRot, 0.0f);
+            transform.rotation = Quaternion.Euler(xRot, yRot, 0.0f);
+        }
     }
 }

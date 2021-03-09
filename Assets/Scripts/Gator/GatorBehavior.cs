@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GatorBehavior : MonoBehaviour
 {
@@ -14,25 +15,29 @@ public class GatorBehavior : MonoBehaviour
     public float attentionTimer;
 
     private bool duckSeen = false;
+    private bool duckCaught = false;
 
     void Update()
     {
-        if (duckSeen && duckTarget != null)
+        if (!duckCaught)
         {
-            TargetTracking(1);
-
-            if (duckTarget.GetComponent<DuckMovement>().inWater)
+            if (duckSeen && duckTarget != null)
             {
-                gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, new Vector3(duckTarget.transform.position.x, 10, duckTarget.transform.position.z), 0.1f);
+                TargetTracking(1);
+
+                if (duckTarget.GetComponent<DuckMovement>().inWater)
+                {
+                    gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, new Vector3(duckTarget.transform.position.x, 10, duckTarget.transform.position.z), 0.1f);
+                }
+
+                DuckCheck();
             }
 
-            DuckCheck();
-        }
-
-        if (duckTarget == null && patrolTarget != null)
-        {
-            TargetTracking(2);
-            gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, patrolTarget.transform.position, 0.1f);
+            if (duckTarget == null && patrolTarget != null)
+            {
+                TargetTracking(2);
+                gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, patrolTarget.transform.position, 0.1f);
+            }            
         }
     }
 
@@ -91,6 +96,23 @@ public class GatorBehavior : MonoBehaviour
         }
 
         gameObject.transform.rotation = Quaternion.Slerp(gameObject.transform.rotation, targetRotation, speed * Time.deltaTime);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.GetComponent<DuckMovement>())
+        {
+            duckCaught = true;
+            StartCoroutine(EndGame());
+        }
+    }
+    IEnumerator EndGame()
+    {
+        FindObjectOfType<DuckMovement>().enabled = false;
+        GameObject.Find("GameOverLose").SetActive(true);
+
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene("MainMenu");
     }
 
     private void OnDrawGizmos()

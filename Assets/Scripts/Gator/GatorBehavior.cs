@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class GatorBehavior : MonoBehaviour
 {
+    [SerializeField] BoolVar isPaused;
+
     public GameObject patrolTarget = null;
     public GameObject duckTarget = null;
     public float speed = 5f;
@@ -19,25 +21,28 @@ public class GatorBehavior : MonoBehaviour
 
     void Update()
     {
-        if (!duckCaught)
+        if (isPaused.Value == false)
         {
-            if (duckSeen && duckTarget != null)
+            if (!duckCaught)
             {
-                TargetTracking(1);
-
-                if (duckTarget.GetComponent<DuckMovement>().inWater)
+                if (duckSeen && duckTarget != null)
                 {
-                    gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, new Vector3(duckTarget.transform.position.x, 10, duckTarget.transform.position.z), 0.1f);
+                    TargetTracking(1);
+
+                    if (duckTarget.GetComponent<DuckMovement>().inWater)
+                    {
+                        gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, new Vector3(duckTarget.transform.position.x, 10, duckTarget.transform.position.z), 0.1f);
+                    }
+
+                    DuckCheck();
                 }
 
-                DuckCheck();
+                if (duckTarget == null && patrolTarget != null)
+                {
+                    TargetTracking(2);
+                    gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, patrolTarget.transform.position, 0.1f);
+                }
             }
-
-            if (duckTarget == null && patrolTarget != null)
-            {
-                TargetTracking(2);
-                gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, patrolTarget.transform.position, 0.1f);
-            }            
         }
     }
 

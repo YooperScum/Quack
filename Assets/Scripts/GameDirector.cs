@@ -9,8 +9,7 @@ public class GameDirector : MonoBehaviour
     [SerializeField] GameObject pauseFade;
     [SerializeField] GameObject pauseMenu;
     [SerializeField] GameObject settingsMenu;
-    [SerializeField] FloatVar musicVolume;
-    [SerializeField] AudioSource music;
+    
 
     private int brothersToWin = 4;
     private int currentBrothers = 0;
@@ -19,7 +18,7 @@ public class GameDirector : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {
+    { 
         player = GameObject.Find("Player");
         sewerExit = GameObject.Find("SewerExit");
 
@@ -28,14 +27,11 @@ public class GameDirector : MonoBehaviour
 
     private void Update()
     {
-        music.volume = musicVolume.Value;
-
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (isPaused.Value == false)
             {
                 pauseFade.SetActive(true);
-                music.mute = true;
                 isPaused.Value = true;
                 pauseMenu.SetActive(true);
                 Cursor.lockState = CursorLockMode.Confined;
@@ -56,7 +52,6 @@ public class GameDirector : MonoBehaviour
 
     public void Unpause()
     {
-        music.mute = false;
         if (isPaused.Value == true)
         {
             pauseFade.SetActive(false);

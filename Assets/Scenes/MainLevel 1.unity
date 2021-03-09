@@ -5426,6 +5426,7 @@ GameObject:
   - component: {fileID: 53773126}
   - component: {fileID: 53773125}
   - component: {fileID: 53773127}
+  - component: {fileID: 53773128}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -5449,8 +5450,6 @@ MonoBehaviour:
   pauseFade: {fileID: 1326430809}
   pauseMenu: {fileID: 272160132}
   settingsMenu: {fileID: 2099017039}
-  musicVolume: {fileID: 11400000, guid: 7d1e04c241b5640489ce9c7bdff521b4, type: 2}
-  music: {fileID: 53773127}
 --- !u!4 &53773126
 Transform:
   m_ObjectHideFlags: 0
@@ -5561,6 +5560,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &53773128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 53773124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43585ff52d823b847b7ffb83aa201bd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPaused: {fileID: 11400000, guid: 914bc3decb7cbc34aa010e24bcb90f05, type: 2}
+  soundVolume: {fileID: 11400000, guid: 7d1e04c241b5640489ce9c7bdff521b4, type: 2}
+  sound: {fileID: 53773127}
 --- !u!1001 &53802259
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14959,6 +14973,7 @@ GameObject:
   - component: {fileID: 608010226}
   - component: {fileID: 608010225}
   - component: {fileID: 608010231}
+  - component: {fileID: 608010232}
   m_Layer: 0
   m_Name: Duckling2
   m_TagString: Untagged
@@ -15238,6 +15253,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &608010232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 608010224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43585ff52d823b847b7ffb83aa201bd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPaused: {fileID: 11400000, guid: 914bc3decb7cbc34aa010e24bcb90f05, type: 2}
+  soundVolume: {fileID: 11400000, guid: 7d1e04c241b5640489ce9c7bdff521b4, type: 2}
+  sound: {fileID: 608010231}
 --- !u!1001 &609710293
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18070,7 +18100,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 952541450}
-  m_LocalRotation: {x: 0.22722343, y: 0.0000000042781716, z: -9.982118e-10, w: 0.9738427}
+  m_LocalRotation: {x: 0.22722344, y: -0.000000022471928, z: 0.0000000052432996, w: 0.9738427}
   m_LocalPosition: {x: 0, y: 1.0100002, z: 25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -29001,6 +29031,7 @@ GameObject:
   - component: {fileID: 1652624885}
   - component: {fileID: 1652624884}
   - component: {fileID: 1652624890}
+  - component: {fileID: 1652624891}
   m_Layer: 0
   m_Name: Duckling1
   m_TagString: Untagged
@@ -29140,7 +29171,7 @@ AudioSource:
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
-  DopplerLevel: 5
+  DopplerLevel: 0
   MinDistance: 1
   MaxDistance: 257.60098
   Pan2D: 0
@@ -29280,6 +29311,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1652624891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1652624883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43585ff52d823b847b7ffb83aa201bd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPaused: {fileID: 11400000, guid: 914bc3decb7cbc34aa010e24bcb90f05, type: 2}
+  soundVolume: {fileID: 11400000, guid: 7d1e04c241b5640489ce9c7bdff521b4, type: 2}
+  sound: {fileID: 1652624890}
 --- !u!1001 &1665489142
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35842,6 +35888,7 @@ GameObject:
   - component: {fileID: 1870001097}
   - component: {fileID: 1870001096}
   - component: {fileID: 1870001102}
+  - component: {fileID: 1870001103}
   m_Layer: 0
   m_Name: Duckling4
   m_TagString: Untagged
@@ -36121,6 +36168,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1870001103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1870001095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43585ff52d823b847b7ffb83aa201bd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPaused: {fileID: 11400000, guid: 914bc3decb7cbc34aa010e24bcb90f05, type: 2}
+  soundVolume: {fileID: 11400000, guid: 7d1e04c241b5640489ce9c7bdff521b4, type: 2}
+  sound: {fileID: 1870001102}
 --- !u!1001 &1872943032
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36639,6 +36701,7 @@ GameObject:
   - component: {fileID: 1949613366}
   - component: {fileID: 1949613365}
   - component: {fileID: 1949613371}
+  - component: {fileID: 1949613372}
   m_Layer: 0
   m_Name: Duckling3
   m_TagString: Untagged
@@ -36918,6 +36981,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1949613372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949613364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43585ff52d823b847b7ffb83aa201bd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPaused: {fileID: 11400000, guid: 914bc3decb7cbc34aa010e24bcb90f05, type: 2}
+  soundVolume: {fileID: 11400000, guid: 7d1e04c241b5640489ce9c7bdff521b4, type: 2}
+  sound: {fileID: 1949613371}
 --- !u!1001 &1954079676
 PrefabInstance:
   m_ObjectHideFlags: 0

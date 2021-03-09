@@ -8114,7 +8114,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 356433202}
-  m_LocalRotation: {x: 0.2993565, y: -0.000000016417324, z: 0.000000005150843, w: 0.9541414}
+  m_LocalRotation: {x: 0.2993565, y: 0.000000016417317, z: -0.00000000515084, w: 0.9541414}
   m_LocalPosition: {x: 0, y: 1.0100002, z: 25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -17922,7 +17922,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 941126877}
-  m_LocalRotation: {x: 0.26327124, y: 3e-45, z: -1e-45, w: 0.96472186}
+  m_LocalRotation: {x: 0.26327124, y: -1e-45, z: -0, w: 0.96472186}
   m_LocalPosition: {x: 0, y: 1.0100002, z: 25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -18070,7 +18070,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 952541450}
-  m_LocalRotation: {x: 0.22722344, y: -0.000000022471928, z: 0.0000000052432996, w: 0.9738427}
+  m_LocalRotation: {x: 0.22722343, y: 0.0000000042781716, z: -9.982118e-10, w: 0.9738427}
   m_LocalPosition: {x: 0, y: 1.0100002, z: 25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -18387,7 +18387,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4291757140445166768, guid: 8f2db94087e632d488cfd34be241b4b3, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4291757140445166768, guid: 8f2db94087e632d488cfd34be241b4b3, type: 3}
       propertyPath: m_LocalScale.x
@@ -19299,7 +19299,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1081195783}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 40, y: 17.207272, z: -57}
+  m_LocalPosition: {x: 40, y: 16.57, z: -57}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 71546555}
@@ -19446,8 +19446,8 @@ MonoBehaviour:
   CameraCollisionFilter:
     serializedVersion: 2
     m_Bits: 1
-  IgnoreTag: 
-  CameraRadius: 0.2
+  IgnoreTag: Player
+  CameraRadius: 0.001
 --- !u!1 &1096249044
 GameObject:
   m_ObjectHideFlags: 0
@@ -21270,18 +21270,18 @@ MonoBehaviour:
   m_CollideAgainst:
     serializedVersion: 2
     m_Bits: 1
-  m_IgnoreTag: Player
+  m_IgnoreTag: 
   m_TransparentLayers:
     serializedVersion: 2
     m_Bits: 0
   m_MinimumDistanceFromTarget: 0.1
   m_AvoidObstacles: 1
-  m_DistanceLimit: 0.32
+  m_DistanceLimit: 0.3
   m_MinimumOcclusionTime: 0
-  m_CameraRadius: 6
-  m_Strategy: 2
+  m_CameraRadius: 1.5
+  m_Strategy: 0
   m_MaximumEffort: 4
-  m_SmoothingTime: 0.351
+  m_SmoothingTime: 0.3
   m_Damping: 2.16
   m_DampingWhenOccluded: 2.16
   m_OptimalTargetDistance: 0

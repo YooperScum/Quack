@@ -7,7 +7,9 @@ public class DuckMovement : MonoBehaviour
     public float speed = 15f;
     public float turnSmoothTime = 0.1f;
 
-    private float trunSmoothVelocity;
+    private float turnSmoothVelocity;
+
+    public bool inWater = false;
 
     private Transform cam;
     private Rigidbody body;
@@ -27,6 +29,8 @@ public class DuckMovement : MonoBehaviour
         float vertical = Input.GetAxisRaw("Vertical");
 
         direction = new Vector3(horizontal, 0.0f, vertical).normalized;
+
+
     }
 
     private void FixedUpdate()
@@ -38,7 +42,7 @@ public class DuckMovement : MonoBehaviour
         {
             // Rotation
             float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
-            float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref trunSmoothVelocity, turnSmoothTime);
+            float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
             transform.rotation = Quaternion.Euler(0f, angle, 0f);
 
             // Movemement
@@ -46,7 +50,26 @@ public class DuckMovement : MonoBehaviour
         }
 
         body.velocity = new Vector3(moveDir.x, yVelocity, moveDir.z);
+        WaterCheck();
+    }
 
+    private void WaterCheck()
+    {
+        Ray ray = new Ray(gameObject.transform.position, -Vector3.up);
+        RaycastHit hit;
+        //Raycast to determine if in water and changes inWater bool if so
+        if (Physics.Raycast(ray, out hit, 3, 1 << 4))
+        {
+            inWater = true;
+        }
+        else
+        {
+            inWater = false;
+        }
+    }
 
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawLine(gameObject.transform.position, (gameObject.transform.position - (Vector3.up * 2)));
     }
 }

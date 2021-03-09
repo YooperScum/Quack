@@ -9,8 +9,11 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private GameObject _titleScreen = null;
     [SerializeField] private GameObject _menuScreen = null;
     [SerializeField] private GameObject _settingsScreen = null;
+    [SerializeField] private GameObject _gatorObject = null;
+    [SerializeField] private GameObject _duckObject = null;
     [SerializeField] private Animator _transitionAnim = null;
 
+    private bool gatorLerp = false;
     private bool _titleScreenTriggered = false;
     private bool _camIsPositioned = true;
     private Transform _nextLocation = null;
@@ -48,6 +51,11 @@ public class MenuManager : MonoBehaviour
                 _camIsPositioned = true;
             }
         }
+
+        if (gatorLerp)
+        {
+            _gatorObject.transform.position = Vector3.Lerp(_gatorObject.transform.position, _duckObject.transform.position, 0.01f);
+        }
     }
 
     //Button methods: 
@@ -57,6 +65,7 @@ public class MenuManager : MonoBehaviour
         //Play Transition and change to the main game scene.
         _transitionAnim.gameObject.transform.parent.gameObject.SetActive(true);
         _transitionAnim.SetTrigger("Swipe");
+        gatorLerp = true;
     }
     public void SettingsToggle()
     {

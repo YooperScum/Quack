@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class ExitScript : MonoBehaviour
 {
+    public GameObject gameOverWin = null;
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.GetComponent<DuckMovement>())
@@ -19,7 +20,7 @@ public class ExitScript : MonoBehaviour
     IEnumerator EndGame()
     {
         FindObjectOfType<DuckMovement>().enabled = false;
-        GameObject.Find("GameOverWin").SetActive(true);
+        gameOverWin.SetActive(true);
 
         yield return new WaitForSeconds(2f);
         SceneManager.LoadScene("MainMenu");

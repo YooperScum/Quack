@@ -7024,6 +7024,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 914bc3decb7cbc34aa010e24bcb90f05, type: 2}
     - target: {fileID: 8495543852772284876, guid: 81333f8d446d86b4e96c1db862cf15d5, type: 3}
+      propertyPath: gameOverLose
+      value: 
+      objectReference: {fileID: 953777265}
+    - target: {fileID: 8495543852772284876, guid: 81333f8d446d86b4e96c1db862cf15d5, type: 3}
       propertyPath: patrolTarget
       value: 
       objectReference: {fileID: 983608773}
@@ -20945,6 +20949,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75a034eee25676c479aab61162b751e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameOverWin: {fileID: 649780861}
 --- !u!1 &1030360499
 GameObject:
   m_ObjectHideFlags: 0
@@ -22380,6 +22385,10 @@ PrefabInstance:
       propertyPath: isPaused
       value: 
       objectReference: {fileID: 11400000, guid: 914bc3decb7cbc34aa010e24bcb90f05, type: 2}
+    - target: {fileID: 8495543852772284876, guid: 81333f8d446d86b4e96c1db862cf15d5, type: 3}
+      propertyPath: gameOverLose
+      value: 
+      objectReference: {fileID: 953777265}
     - target: {fileID: 8495543852772284876, guid: 81333f8d446d86b4e96c1db862cf15d5, type: 3}
       propertyPath: patrolTarget
       value: 
@@ -38472,15 +38481,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7870820153831744475, guid: 7add06196ec8b464cb5b5d1cb5e05476, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.014091998
+      value: -0.014091996
       objectReference: {fileID: 0}
     - target: {fileID: 7870820153831744475, guid: 7add06196ec8b464cb5b5d1cb5e05476, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.0000000020001638
+      value: 0.0000000021451738
       objectReference: {fileID: 0}
     - target: {fileID: 7870820153831744475, guid: 7add06196ec8b464cb5b5d1cb5e05476, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 2.8189104e-11
+      value: 3.023278e-11
       objectReference: {fileID: 0}
     - target: {fileID: 7870820153846314510, guid: 7add06196ec8b464cb5b5d1cb5e05476, type: 3}
       propertyPath: m_LocalPosition.x
@@ -38504,11 +38513,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7870820153846314510, guid: 7add06196ec8b464cb5b5d1cb5e05476, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.00000001720179
+      value: 0.000000017201794
       objectReference: {fileID: 0}
     - target: {fileID: 7870820153846314510, guid: 7add06196ec8b464cb5b5d1cb5e05476, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 3.9731957e-10
+      value: -3.9731965e-10
       objectReference: {fileID: 0}
     - target: {fileID: 7870820154598784995, guid: 7add06196ec8b464cb5b5d1cb5e05476, type: 3}
       propertyPath: m_LocalPosition.x
@@ -47793,6 +47802,10 @@ PrefabInstance:
       propertyPath: isPaused
       value: 
       objectReference: {fileID: 11400000, guid: 914bc3decb7cbc34aa010e24bcb90f05, type: 2}
+    - target: {fileID: 8495543852772284876, guid: 81333f8d446d86b4e96c1db862cf15d5, type: 3}
+      propertyPath: gameOverLose
+      value: 
+      objectReference: {fileID: 953777265}
     - target: {fileID: 8495543852772284876, guid: 81333f8d446d86b4e96c1db862cf15d5, type: 3}
       propertyPath: patrolTarget
       value: 

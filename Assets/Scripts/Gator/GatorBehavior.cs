@@ -9,6 +9,8 @@ public class GatorBehavior : MonoBehaviour
 
     public GameObject patrolTarget = null;
     public GameObject duckTarget = null;
+    public GameObject gameOverLose = null;
+
     public float speed = 5f;
     public float pursuitRange = 30f;
     public float turnRate = 10f;
@@ -114,7 +116,7 @@ public class GatorBehavior : MonoBehaviour
     IEnumerator EndGame()
     {
         FindObjectOfType<DuckMovement>().enabled = false;
-        GameObject.Find("GameOverLose").SetActive(true);
+        gameOverLose.SetActive(true);
 
         yield return new WaitForSeconds(2f);
         SceneManager.LoadScene("MainMenu");

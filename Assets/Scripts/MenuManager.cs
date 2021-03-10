@@ -23,6 +23,7 @@ public class MenuManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Cursor.lockState = CursorLockMode.Confined;
         _cam = Camera.main;
         _titleScreen.SetActive(true);
         _menuScreen.SetActive(false);

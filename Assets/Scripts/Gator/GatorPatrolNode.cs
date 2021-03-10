@@ -12,7 +12,6 @@ public class GatorPatrolNode : MonoBehaviour
         {
             if (gameObject == other.GetComponent<GatorBehavior>().patrolTarget)
             {
-                Debug.Log("Yes");
                 other.gameObject.GetComponent<GatorBehavior>().patrolTarget = nextNode;
             }
         }

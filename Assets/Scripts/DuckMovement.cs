@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class DuckMovement : MonoBehaviour
 {
+    [SerializeField] Animator animator;
+
     public float speed = 15f;
     public float turnSmoothTime = 0.1f;
 
@@ -14,6 +16,7 @@ public class DuckMovement : MonoBehaviour
     private Transform cam;
     private Rigidbody body;
     private Vector3 direction;
+    private bool isMoving = false;
 
     public Stack<GameObject> ducklingStack = new Stack<GameObject>();
 
@@ -29,12 +32,22 @@ public class DuckMovement : MonoBehaviour
         float vertical = Input.GetAxisRaw("Vertical");
 
         direction = new Vector3(horizontal, 0.0f, vertical).normalized;
-
-
     }
 
     private void FixedUpdate()
     {
+        if (body.velocity.magnitude > 0.001f)
+        {
+            isMoving = true;
+        }
+        else
+        {
+            isMoving = false;
+        }
+
+        animator.SetBool("InWater", inWater);
+        animator.SetBool("IsMoving", isMoving);
+
         Vector3 moveDir = Vector3.zero;
         float yVelocity = body.velocity.y;
 

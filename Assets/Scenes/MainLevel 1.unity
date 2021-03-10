@@ -16896,7 +16896,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 08a99e8e0e75d96479608ae5dfd291e4, type: 3}
     m_FontSize: 100
     m_FontStyle: 0
     m_BestFit: 0
@@ -19731,7 +19731,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 08a99e8e0e75d96479608ae5dfd291e4, type: 3}
     m_FontSize: 100
     m_FontStyle: 0
     m_BestFit: 0
@@ -38481,15 +38481,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7870820153831744475, guid: 7add06196ec8b464cb5b5d1cb5e05476, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.014091996
+      value: -0.014091993
       objectReference: {fileID: 0}
     - target: {fileID: 7870820153831744475, guid: 7add06196ec8b464cb5b5d1cb5e05476, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.0000000021451738
+      value: -0.0000000031862037
       objectReference: {fileID: 0}
     - target: {fileID: 7870820153831744475, guid: 7add06196ec8b464cb5b5d1cb5e05476, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 3.023278e-11
+      value: -4.4904417e-11
       objectReference: {fileID: 0}
     - target: {fileID: 7870820153846314510, guid: 7add06196ec8b464cb5b5d1cb5e05476, type: 3}
       propertyPath: m_LocalPosition.x

@@ -24,6 +24,7 @@ public class MenuManager : MonoBehaviour
     void Start()
     {
         Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
         _cam = Camera.main;
         _titleScreen.SetActive(true);
         _menuScreen.SetActive(false);
